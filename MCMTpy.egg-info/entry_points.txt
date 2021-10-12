@@ -1,0 +1,3 @@
+[console_scripts]
+MCMTpy = MCMTpy.apps.MCMTpy:main
+

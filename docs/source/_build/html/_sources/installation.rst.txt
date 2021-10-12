@@ -1,0 +1,282 @@
+Installation
+============
+
+.. contents::
+    :local:
+    :depth: 2
+
+.. note::
+
+    🚨 **This package is still undergoing development.** 🚨
+ 
+        It is not recommended use **Parallel installation**, because it's somewhat complicated and 
+        prepared for the future version for parallel reading of data. Now use **Quick installation** or 
+        **Source installation**, you can also run ``MCMTpy`` in parallel. Please note that the test 
+        is performed on **macOS Big Sur (11.2.1)**, so it could be slightly different for other OS.
+
+
+
+
+Dependencies
+------------------------
+
+The package ``MCMTpy`` runs on Unix-like systems including Mac and Linux. Package need 
+**Python 3.6 or greater**, but python 3.9 is not supported for ``pyfk``. It depends on the
+following Python modules: 
+
+* ``numpy>=1.14``
+* ``tqdm>=4.19.4``
+* ``matplotlib<=3.1.1``
+* ``mpi4py``
+* ``obspy``
+* ``pyfk``
+* ``pyasdf``
+* ``json5``
+  
+For parallel:  
+
+*  `h5py  <https://docs.h5py.org/en/stable/build.html>`_
+
+For data preprocessing and visualization:
+
+*  `pygmt  <https://www.pygmt.org/latest/install.html>`_
+
+We recommend to use `anaconda <https://www.anaconda.com/>`_ as your python environment, and 
+use `conda <https://docs.conda.io/en/latest/>`_ and `pip <https://pypi.org/project/pip/>`_ 
+to install those librarys.
+
+
+
+
+
+
+Quick installation
+------------------------
+Firstly, make sure **Anaconda** has been installed, then:
+
+.. code-block:: bash
+
+    $ conda create -n MCMTpy  python=3.8 numpy=1.16 matplotlib=3.1.1 mpi4py obspy pyasdf json5 tqdm
+    $ conda activate MCMTpy
+    $ pip install pyfk
+    $ pip install MCMTpy
+
+Some errors may occurred of that pyfk not support the new version of ``cysignals``, please:
+
+.. code-block:: bash
+
+    $ conda uninstall cysignals 
+    $ pip install cysignals==1.10.2
+    $ pip install pyfk
+    
+
+Successful installation will generate an executable program ``MCMTpy`` under the anaconda environment path: 
+*/Users/user/opt/anaconda3/bin*. And run following code to check the installation:
+
+.. code-block:: bash
+
+    $ MCMTpy --help
+
+
+
+
+
+
+
+Source installation
+------------------------
+.. code-block:: bash
+
+    $ git clone https://github.com/OUCyf/MCMTpy.git
+    $ cd MCMTpy
+    $ python setup.py install
+
+
+
+
+
+
+
+
+
+
+
+Parallel installation (for future version)
+------------------------------------------------
+
+1. Install pyfk
+~~~~~~~~~~~~~~~~
+Firstly, make sure **Anaconda** has been installed, then:
+
+.. code-block:: bash
+
+    $ conda create -n MCMTpy  python=3.8 numpy=1.16 obspy
+    $ conda activate MCMTpy
+    $ pip install pyfk
+
+Some errors may occurred of that pyfk not support the new version of ``cysignals``, please:
+
+.. code-block:: bash
+
+    $ conda uninstall cysignals 
+    $ pip install cysignals==1.10.2
+    $ pip install pyfk
+
+🚨 **Make sure the new environment does not include the following packages that we will install below:** 🚨
+
+
+
+
+
+
+2. Install the HDF5 parallel version
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* First, make sure **openmpi** or other **MPI** program has been installed, preferably source code installed. 
+  You can use **which mpicc** to get the installation's path.
+
+* Activate the MCMTpy environment, and uninstall the ``mpi4py`` package in this environment (if it have). 
+  Then use ``pip`` install the ``mpi4py`` package not ``conda``.
+
+.. code-block:: bash
+
+    $ conda uninstall mpi4py 
+    $ pip install mpi4py 
+
+.. note::
+
+    When you use ``pip`` install ``mpi4py``, it will use the **mpicc** in your system. But if you use ``conda`` 
+    to do the installation, it resolves the dependent environment itself and install conda's mpicc in your 
+    environment which will cause problems for subsequent installations due to the not source code compilation 
+    of **MPI**. After installing ``mpi4py``, you can use **which mpicc** to check whether it is a system 
+    mpicc or a conda mpicc.
+
+* Then you need to install the parallel version of `HDF5 <https://www.hdfgroup.org/downloads/hdf5/>`_. Download the source 
+  package, compile and install the parallel version to your path.
+  Your system may already have HDF5 installed. Software such as GMT relies on the HDF5 package, so use **h5cc-showconfig** 
+  to see more information about installation, note that h5cc is usually not shown in parallel. We do not want to uninstall 
+  the existing version of HDF5 on our system. This does not conflict with our subsequent installation of the parallel 
+  version of HDF5, as long as we specify the installation path of the parallel version.
+
+.. code-block:: bash
+
+    $ chmod 777 ./configure  # enable read/write access
+    $ ./configure --enable-parallel --enable-shared --prefix=/your/path/of/hdf5_dir/
+    $ make
+    $ make check
+    $ make install
+
+* After the installation, the executable program will be generated in **./bin** path of your **hdf5_dir** directory. 
+  **h5pcc** will be generated due to the parallel installation, similar to the **h5cc** will be generated by the non-parallel 
+  installation. Check the installation version information:
+
+.. code-block:: bash
+
+    $ h5pcc -showconfig
+
+
+
+
+3. Install the h5py parallel version
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Before installing ``h5py``, you need to uninstall both ``hdf5`` and ``h5py`` in your environment, and then download 
+  h5py <https://github.com/h5py/h5py> and compile the source code. You need to specify the path of **HDF5** and **CC**.
+
+.. code-block:: bash
+
+    $ export CC=/path/to/mpicc   # do not use conda's mpicc
+    $ echo %CC 
+    $ export HDF5_MPI="ON"
+    $ export HDF5_DIR="/your/path/of/hdf5_dir/" 
+    $ pip install .
+
+* Check the installation version information (download the **demo2.py** on h5py):
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    # -*- coding: utf-8 -*-
+
+    from mpi4py import MPI
+    import h5py
+
+    rank = MPI.COMM_WORLD.rank  # The process ID (integer 0-3 for 4-process run)
+  
+    f = h5py.File('parallel_test.hdf5', 'w', driver='mpio', comm=MPI.COMM_WORLD)
+
+    dset = f.create_dataset('test', (4,), dtype='i')
+    dset[rank] = rank
+
+    f.close()
+
+Run the program::
+
+    $ mpiexec -n 4 python demo2.py
+
+Looking at the file with ``h5dump``::
+
+    $ h5dump parallel_test.hdf5
+    HDF5 "parallel_test.hdf5" {
+    GROUP "/" {
+       DATASET "test" {
+          DATATYPE  H5T_STD_I32LE
+          DATASPACE  SIMPLE { ( 4 ) / ( 4 ) }
+          DATA {
+          (0): 0, 1, 2, 3
+          }
+       }
+    }
+    }
+
+
+
+
+
+
+1. Install pyasdf parallel version
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* After the above steps are completed sucessful, you can directly use ``pip`` to install ``pyasdf``
+
+.. code-block:: bash
+
+    $ pip install pyasdf
+    $ python -c "import pyasdf; pyasdf.print_sys_info()"   # (check for a parallel version)
+
+
+
+
+
+
+5. Install MCMTpy parallel version
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Finally, you can install the parallel version of MCMTpy.
+
+.. code-block:: bash
+
+    $ pip install MCMTpy        # or python setup.py install
+    $ pip uninstall MCMTpy      # uninstall
+
+
+
+
+
+
+
+
+
+Reference Installation Blog
+---------------------------
+* https://drtiresome.com/2016/08/23/build-and-install-mpi-parallel-hdf5-and-h5py-from-source-on-linux/
+* https://gist.github.com/kentwait/280aa20e9d8f2c8737b2bec4a49b7c92
+* https://github.com/h5py/h5py/issues/759
+* https://seismicdata.github.io/pyasdf/installation.html
+* https://noise-python.readthedocs.io/en/latest/installation.html
+* https://docs.h5py.org/en/stable/mpi.html
+* https://docs.h5py.org/en/stable/build.html
+* https://github.com/conda-forge/hdf5-feedstock/issues/118
+* https://distarray.readthedocs.io/en/latest/hdf5-notes.html
+* https://forum.hdfgroup.org/t/installing-hdf5-ready-version-of-open-mpi/4998
+
+
+
+
+

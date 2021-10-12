@@ -1,0 +1,731 @@
+YN   EYA   
+Lat_lon_depth	26.108801   99.947502   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-6.00	3.40	
+S_win		-5.00	25.20	
+Surf_win		-8.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.20	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   YUL   
+Lat_lon_depth	25.885401   99.371696   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-6.00	6.20	
+S_win		-5.00	25.20	
+Surf_win		-8.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+XG   CFT   
+Lat_lon_depth	25.848600   100.517300   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-6.00	8.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   BAS   
+Lat_lon_depth	25.118000   99.146599   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	10.20	
+S_win		-5.00	25.20	
+Surf_win		-8.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   HEQ   
+Lat_lon_depth	26.549000   100.151500   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	10.20	
+S_win		-5.00	25.20	
+Surf_win		-8.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   LUS   
+Lat_lon_depth	25.831699   98.851799   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	12.20	
+S_win		-5.00	25.20	
+Surf_win		-10.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   LIJ   
+Lat_lon_depth	26.895599   100.232200   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	10.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   YOS   
+Lat_lon_depth	26.694099   100.768300   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	10.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   DAY   
+Lat_lon_depth	25.726801   101.316400   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	17.20	
+S_win		-5.00	25.20	
+Surf_win		-10.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   TNC   
+Lat_lon_depth	25.028900   98.519798   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	18.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   HUP   
+Lat_lon_depth	26.587099   101.199300   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	15.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   CUX   
+Lat_lon_depth	25.029301   101.535600   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	15.20	
+S_win		-5.00	25.20	
+Surf_win		-10.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   MAS   
+Lat_lon_depth	24.424500   98.592499   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	13.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   YOD   
+Lat_lon_depth	24.035700   99.245399   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	15.20	
+S_win		-5.00	25.20	
+Surf_win		-10.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   YUM   
+Lat_lon_depth	25.689400   101.860700   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	20.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   LIC   
+Lat_lon_depth	23.879499   100.168800   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	20.20	
+S_win		-5.00	25.20	
+Surf_win		-10.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   ZOD   
+Lat_lon_depth	27.823200   99.698402   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	17.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   YIM   
+Lat_lon_depth	24.700199   102.144000   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	17.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   WAD   
+Lat_lon_depth	24.085100   98.070900   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	26.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   JIG   
+Lat_lon_depth	23.501900   100.735100   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	26.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   LUQ   
+Lat_lon_depth	25.548500   102.463000   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	27.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   CAY   
+Lat_lon_depth	23.136400   99.258499   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	30.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   KMI   
+Lat_lon_depth	25.148300   102.747500   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	30.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   HLT   
+Lat_lon_depth	25.148300   102.747500   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	30.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   YUJ   
+Lat_lon_depth	23.565901   101.978000   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	30.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   DOC   
+Lat_lon_depth	26.092199   103.186600   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	30.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   QIJ   
+Lat_lon_depth	26.909500   102.943400   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	30.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   TOH   
+Lat_lon_depth	24.112801   102.788100   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	30.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   LAC   
+Lat_lon_depth	22.552401   99.920601   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	30.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   JIS   
+Lat_lon_depth	23.650400   102.759800   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	35.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   MEL   
+Lat_lon_depth	22.336500   99.579597   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	35.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   MAL   
+Lat_lon_depth	25.427299   103.575200   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	35.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   MIL   
+Lat_lon_depth	24.405800   103.388500   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	35.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   JIH   
+Lat_lon_depth	22.019400   100.738200   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	40.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   GEJ   
+Lat_lon_depth	23.353500   103.159600   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	40.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   ZAT   
+Lat_lon_depth	27.451700   103.655000   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	40.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	70.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   XUW   
+Lat_lon_depth	26.088100   104.135700   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	40.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	70.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   LOP   
+Lat_lon_depth	24.885599   104.291100   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	40.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	70.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   JIP   
+Lat_lon_depth	22.782499   103.223400   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	40.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	70.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   YAJ   
+Lat_lon_depth	28.111700   104.231500   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	45.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	70.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   WES   
+Lat_lon_depth	23.372000   104.253000   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	45.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	70.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   MLP   
+Lat_lon_depth	23.128401   104.702400   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	45.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	70.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   FUN   
+Lat_lon_depth	23.624901   105.620200   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	45.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	70.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.100	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+

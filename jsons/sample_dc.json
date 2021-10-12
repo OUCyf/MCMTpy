@@ -1,0 +1,184 @@
+{
+
+    // 1.Path
+    "GFs_json_file": "./build_GFs.json",                           // The path to the Json-file used to calculate Green Function Database.
+    "GFs_file": "./GFs/GFs_splits",                                // The path to the Green Function Database.
+    "Raw_data_file": "./YN.202105212148.h5",             // The path to the Raw data ASDF file.
+    "Source_tag": "source_enz",                                                 // Raw data ASDF file’s source name which setted in the data preprocess function.
+    "Raw_p_n0": 100,                                                             // The number of points before the first arrival.
+    "Dt": 0.2,                                                                  // Sampling rate of the raw data.
+    "Output_path": "./Output_YN.202105212148_dc",                             // Inversion result output file path.
+
+
+
+    // 2.Source Time Function
+    "Trapezoid_stf_mode":  true,                                                // Whether to use pyfk provided trapezoid shaped source time function.
+    //-------------- true --------------
+        "dura": 6,                                                              // Duration time (s).
+        "rise": 0.5,                                                            // Rise time (s).
+        "delta": 0.2,                                                           // The time interval (s).
+    //-------------- false --------------
+    "Stf_file":"./Stf_file/stf_file.sac",                                       // SAC file as the source time function.
+
+
+
+    // 3.MPI and Chains_n
+    "MPI_n": 1,                                                                 // CPU number.
+    "Chains_n": 1,                                                              // A total of n Markov Chains are sampled on each core (CPU).
+    "N": 20000,                                                                   // Each Markov Chains’ sampling number.
+
+
+
+    // 4.Misfit
+    "Geometrical_spreading_mode": true,                                         // Whether the geometric diffusion correction
+    "Distance_0": 1,                                                          // The reference epicentral distance
+    "Amplitude_normalization_mode":  false,                                     // Waveform normalization mode.
+
+    "Use_file_mode": true,                                                      // Whether use *Raw_data_inv_info*
+    //-------------- true --------------
+        "Raw_data_inv_info": "./Raw_data_inv_info.txt",                         // ..=true. The path to inversion parameters file
+
+    //-------------- false (Raw_data_inv_info) --------------
+        "Raw_data_inv_info_writed": "./Raw_data_inv_info_writed.txt",           // ..=false. Generate this file automatically
+
+        "NET_STA":[
+['YN', 'EYA', 26.108801, 99.947502, 0],
+['YN', 'YUL', 25.885401, 99.371696, 0],
+['XG', 'CFT', 25.8486, 100.5173, 0],
+['YN', 'BAS', 25.118, 99.146599, 0],
+['YN', 'HEQ', 26.549, 100.1515, 0],
+['YN', 'LUS', 25.831699, 98.851799, 0],
+['YN', 'LIJ', 26.895599, 100.2322, 0],
+['YN', 'YOS', 26.694099, 100.7683, 0],
+['YN', 'DAY', 25.726801, 101.3164, 0],
+['YN', 'TNC', 25.0289, 98.519798, 0],
+
+['YN', 'HUP', 26.587099, 101.1993, 0],
+['YN', 'CUX', 25.029301, 101.5356, 0],
+['YN', 'MAS', 24.4245, 98.592499, 0],
+['YN', 'YOD', 24.0357, 99.245399, 0],
+['YN', 'YUM', 25.6894, 101.8607, 0],
+['YN', 'LIC', 23.879499, 100.1688, 0],
+['YN', 'ZOD', 27.8232, 99.698402, 0],
+['YN', 'YIM', 24.700199, 102.144, 0],
+['YN', 'WAD', 24.0851, 98.0709, 0],
+['YN', 'JIG', 23.5019, 100.7351, 0],
+
+['YN', 'LUQ', 25.5485, 102.463, 0],
+['YN', 'CAY', 23.1364, 99.258499, 0],
+['YN', 'KMI', 25.1483, 102.7475, 0],
+['YN', 'HLT', 25.1483, 102.7475, 0],
+['YN', 'YUJ', 23.565901, 101.978, 0],
+['YN', 'DOC', 26.092199, 103.1866, 0],
+['YN', 'QIJ', 26.9095, 102.9434, 0],
+['YN', 'TOH', 24.112801, 102.7881, 0],
+['YN', 'LAC', 22.552401, 99.920601, 0],
+['YN', 'JIS', 23.6504, 102.7598, 0],
+
+['YN', 'MEL', 22.3365, 99.579597, 0],
+['YN', 'MAL', 25.427299, 103.5752, 0],
+['YN', 'MIL', 24.4058, 103.3885, 0],
+['YN', 'JIH', 22.0194, 100.7382, 0],
+['YN', 'GEJ', 23.3535, 103.1596, 0],
+['YN', 'ZAT', 27.4517, 103.655, 0],
+['YN', 'XUW', 26.0881, 104.1357, 0],
+['YN', 'LOP', 24.885599, 104.2911, 0],
+['YN', 'JIP', 22.782499, 103.2234, 0],
+['YN', 'YAJ', 28.1117, 104.2315, 0],
+
+['YN', 'WES', 23.372, 104.253, 0],
+['YN', 'MLP', 23.128401, 104.7024, 0],
+['YN', 'FUN', 23.624901, 105.6202, 0],],                                        // [network_name] [station_name] [station_lat] [source_lon] [station_depth]
+
+        "P_inv_comp":  ['yes','yes','no'],                                      // P wave Z/R/T component. 'yes': inversion. 'no': no inversion. Select the component you want to invert.
+        "S_inv_comp" : ['no','no','no'],                                        // S wave Z/R/T ...
+        "Surf_inv_comp" : ['yes','yes','yes'],                                  // Surface wave Z/R/T ...
+
+        "P_win":  [-1,15.2],                                                   // P wave P_win=[-1,2] unit/s; The P wave fitting band, and '-1' means 1 second before the P wave, '2' means 2 second after the P wave.
+        "S_win":  [-5,25.2],                                                    // S wave ...
+        "Surf_win":  [-5,50.2],                                                // Surface wave ...
+
+        "Phase_weight":  [1,1,1],                                               // P/S/Surface wave inversion weight
+
+        "Distance_weight":  [1,1,1,1,1,1,1,1,1,1,
+                             1,1,1,1,1,1,1,1,1,1,
+                             1,1,1,1,1,1,1,1,1,1,
+                             1,1,1,1,1,1,1,1,1,1,
+                             1,1,1],                                            // The weight of each station in NET_STA
+
+        "P_maxlag":  5,                                                         // unit/s. The maximum number of moveable sampling points to fitting waveform. It is generally half the period of the P waveform.
+        "S_maxlag":  15,
+        "Surf_maxlag":  5,
+
+        "P_filter": [0.01,0.2],                                                 // P wave filter range, [freqmin, freqmax].
+        "S_filter": [0.01,0.1],
+        "Surf_filter":[0.005,0.1],
+    //--------------- false (Raw_data_inv_info) -----------------
+
+
+
+    // 5.Inversion parameters
+    "InvType":"dc",                                                             // The type of Green’s function, mt(moment tensor) dc(double-couple) sf(single-couple) ep(explosion).
+
+    "FM0":[6.4, 138,  82,  -161,    25.67,  99.87,  5.0,  0 ],          // dc:[m0, str, dip rake, lat, lon, depth, t0] || mt:[m0, m_xx, m_xy, m_xz, m_yy, m_yz, m_zz, lat, lon, depth, t0] || ep:[m0]
+    // 359,  50.0,  -178,  25.3,  99.6,  15,  0
+    "Fixed_FM":  ['variable','variable','variable','variable',                  // List corresponds to FM0: ‘constant’ means fixed to a constant and unchanged in the inversion process. || ‘variable’ is represented as a variable and participates in the inversion.
+                    'variable','variable','variable','variable',],
+
+    "FM_boundary":[ [0,  10],                                                   // m0 search boundary
+                    [0,  360],                                                  // str
+                    [0,  90],                                                   // dip
+                    [-180,  180],                                               // rake
+                    [25.4,  25.9],                                              // lat
+                    [99.7,  100.2],                                             // lon
+                    [1,  30],                                                   // depth
+                    [-5,  5] ],                                               // t0
+
+    // Noise level estimation of raw travel time Tp and Ts
+    "Noise_level_phasetime":0.2,
+
+    // Noise level estimation of raw waveform data
+    "Noise_level_waveform":0.45,
+
+
+
+
+
+    // N_k value
+    "N_k":2000,
+
+
+    // N_mag times used to roughly estimate Mw
+    "N_mag":10,
+
+
+    // The standard deviation of the new solution of Mw. (!!******!!)
+    "sigma_mw": 0.02,
+
+
+    // The standard deviation of the new solution of Moment Tensor.
+    "sigma_mt": 1,
+
+
+    // The standard deviation of the new solution of Strike Dip Rake. (!!******!!)
+    "sigma_dc": 2,
+
+
+    // The standard deviation of the new solution of Single Couple (not test now).
+    "sigma_sf": 1,
+
+
+    // The standard deviation of the new solution of Latitude and Longitude (degree). (!!******!!)
+    "sigma_lat_lon": 0.02,
+
+
+    // The standard deviation of the new solution of Source Depth (km). (!!******!!)
+    "sigma_depth": 0.5,
+
+
+    // The standard deviation of the new solution of T0 (s). (!!******!!)
+    "sigma_t": 0.1,
+
+
+
+}

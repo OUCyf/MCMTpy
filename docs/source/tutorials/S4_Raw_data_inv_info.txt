@@ -1,0 +1,33 @@
+YN   EYA   
+Lat_lon_depth	26.108801   99.947502   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	3.40	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.20	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	
+
+YN   YUL   
+Lat_lon_depth	25.885401   99.371696   0.000000   
+P_inv_comp	yes	yes	no	
+S_inv_comp	no	no	no	
+Surf_inv_comp	yes	yes	yes	
+P_win		-10.00	6.20	
+S_win		-5.00	25.20	
+Surf_win		-12.00	50.20	
+Phase_weight	1.0	1.0	1.0	
+Distance_weight	1.0	
+P_maxlag		5.0000	
+S_maxlag		15.0000	
+Surf_maxlag	10.0000	
+P_filter		0.010	0.200	
+S_filter		0.010	0.100	
+Surf_filter	0.005	0.100	

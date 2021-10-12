@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Installation &mdash; MCMTpy-test 0.1.0a1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial" href="tutorial.html" />
+    <link rel="prev" title="Welcome to MCMTpy-test’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MCMTpy-test
+          
+
+          
+            
+            <img src="_static/logo-small-cut.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0a1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installing:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quick-installation">Quick installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-installation">Source installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parallel-installation-for-future-version">Parallel installation (for future version)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-pyfk">1. Install pyfk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-hdf5-parallel-version">2. Install the HDF5 parallel version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-h5py-parallel-version">3. Install the h5py parallel version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-pyasdf-parallel-version">1. Install pyasdf parallel version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-mcmtpy-parallel-version">5. Install MCMTpy parallel version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reference-installation-blog">Reference Installation Blog</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_detailed.html">Tutorial_Detailed</a></li>
+</ul>
+<p class="caption"><span class="caption-text">References:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MCMTpy-test</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#dependencies" id="id1">Dependencies</a></p></li>
+<li><p><a class="reference internal" href="#quick-installation" id="id2">Quick installation</a></p></li>
+<li><p><a class="reference internal" href="#source-installation" id="id3">Source installation</a></p></li>
+<li><p><a class="reference internal" href="#parallel-installation-for-future-version" id="id4">Parallel installation (for future version)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#install-pyfk" id="id5">1. Install pyfk</a></p></li>
+<li><p><a class="reference internal" href="#install-the-hdf5-parallel-version" id="id6">2. Install the HDF5 parallel version</a></p></li>
+<li><p><a class="reference internal" href="#install-the-h5py-parallel-version" id="id7">3. Install the h5py parallel version</a></p></li>
+<li><p><a class="reference internal" href="#install-pyasdf-parallel-version" id="id8">1. Install pyasdf parallel version</a></p></li>
+<li><p><a class="reference internal" href="#install-mcmtpy-parallel-version" id="id9">5. Install MCMTpy parallel version</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#reference-installation-blog" id="id10">Reference Installation Blog</a></p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>🚨 <strong>This package is still undergoing development.</strong> 🚨</p>
+<blockquote>
+<div><p>It is not recommended use <strong>Parallel installation</strong>, because it’s somewhat complicated and
+prepared for the future version for parallel reading of data. Now use <strong>Quick installation</strong> or
+<strong>Source installation</strong>, you can also run <code class="docutils literal notranslate"><span class="pre">MCMTpy</span></code> in parallel. Please note that the test
+is performed on <strong>macOS Big Sur (11.2.1)</strong>, so it could be slightly different for other OS.</p>
+</div></blockquote>
+</div>
+<div class="section" id="dependencies">
+<h2><a class="toc-backref" href="#id1">Dependencies</a><a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>The package <code class="docutils literal notranslate"><span class="pre">MCMTpy</span></code> runs on Unix-like systems including Mac and Linux. Package need
+<strong>Python 3.6 or greater</strong>, but python 3.9 is not supported for <code class="docutils literal notranslate"><span class="pre">pyfk</span></code>. It depends on the
+following Python modules:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy&gt;=1.14</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tqdm&gt;=4.19.4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib&lt;=3.1.1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mpi4py</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">obspy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pyfk</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pyasdf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">json5</span></code></p></li>
+</ul>
+<p>For parallel:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.h5py.org/en/stable/build.html">h5py</a></p></li>
+</ul>
+<p>For data preprocessing and visualization:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.pygmt.org/latest/install.html">pygmt</a></p></li>
+</ul>
+<p>We recommend to use <a class="reference external" href="https://www.anaconda.com/">anaconda</a> as your python environment, and
+use <a class="reference external" href="https://docs.conda.io/en/latest/">conda</a> and <a class="reference external" href="https://pypi.org/project/pip/">pip</a>
+to install those librarys.</p>
+</div>
+<div class="section" id="quick-installation">
+<h2><a class="toc-backref" href="#id2">Quick installation</a><a class="headerlink" href="#quick-installation" title="Permalink to this headline">¶</a></h2>
+<p>Firstly, make sure <strong>Anaconda</strong> has been installed, then:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n MCMTpy  <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8 <span class="nv">numpy</span><span class="o">=</span><span class="m">1</span>.16 <span class="nv">matplotlib</span><span class="o">=</span><span class="m">3</span>.1.1 mpi4py obspy pyasdf json5 tqdm
+$ conda activate MCMTpy
+$ pip install pyfk
+$ pip install MCMTpy
+</pre></div>
+</div>
+<p>Some errors may occurred of that pyfk not support the new version of <code class="docutils literal notranslate"><span class="pre">cysignals</span></code>, please:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda uninstall cysignals
+$ pip install <span class="nv">cysignals</span><span class="o">==</span><span class="m">1</span>.10.2
+$ pip install pyfk
+</pre></div>
+</div>
+<p>Successful installation will generate an executable program <code class="docutils literal notranslate"><span class="pre">MCMTpy</span></code> under the anaconda environment path:
+<em>/Users/user/opt/anaconda3/bin</em>. And run following code to check the installation:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ MCMTpy --help
+</pre></div>
+</div>
+</div>
+<div class="section" id="source-installation">
+<h2><a class="toc-backref" href="#id3">Source installation</a><a class="headerlink" href="#source-installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OUCyf/MCMTpy.git
+$ <span class="nb">cd</span> MCMTpy
+$ python setup.py install
+</pre></div>
+</div>
+</div>
+<div class="section" id="parallel-installation-for-future-version">
+<h2><a class="toc-backref" href="#id4">Parallel installation (for future version)</a><a class="headerlink" href="#parallel-installation-for-future-version" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-pyfk">
+<h3><a class="toc-backref" href="#id5">1. Install pyfk</a><a class="headerlink" href="#install-pyfk" title="Permalink to this headline">¶</a></h3>
+<p>Firstly, make sure <strong>Anaconda</strong> has been installed, then:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n MCMTpy  <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8 <span class="nv">numpy</span><span class="o">=</span><span class="m">1</span>.16 obspy
+$ conda activate MCMTpy
+$ pip install pyfk
+</pre></div>
+</div>
+<p>Some errors may occurred of that pyfk not support the new version of <code class="docutils literal notranslate"><span class="pre">cysignals</span></code>, please:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda uninstall cysignals
+$ pip install <span class="nv">cysignals</span><span class="o">==</span><span class="m">1</span>.10.2
+$ pip install pyfk
+</pre></div>
+</div>
+<p>🚨 <strong>Make sure the new environment does not include the following packages that we will install below:</strong> 🚨</p>
+</div>
+<div class="section" id="install-the-hdf5-parallel-version">
+<h3><a class="toc-backref" href="#id6">2. Install the HDF5 parallel version</a><a class="headerlink" href="#install-the-hdf5-parallel-version" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>First, make sure <strong>openmpi</strong> or other <strong>MPI</strong> program has been installed, preferably source code installed.
+You can use <strong>which mpicc</strong> to get the installation’s path.</p></li>
+<li><p>Activate the MCMTpy environment, and uninstall the <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code> package in this environment (if it have).
+Then use <code class="docutils literal notranslate"><span class="pre">pip</span></code> install the <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code> package not <code class="docutils literal notranslate"><span class="pre">conda</span></code>.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda uninstall mpi4py
+$ pip install mpi4py
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you use <code class="docutils literal notranslate"><span class="pre">pip</span></code> install <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code>, it will use the <strong>mpicc</strong> in your system. But if you use <code class="docutils literal notranslate"><span class="pre">conda</span></code>
+to do the installation, it resolves the dependent environment itself and install conda’s mpicc in your
+environment which will cause problems for subsequent installations due to the not source code compilation
+of <strong>MPI</strong>. After installing <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code>, you can use <strong>which mpicc</strong> to check whether it is a system
+mpicc or a conda mpicc.</p>
+</div>
+<ul class="simple">
+<li><p>Then you need to install the parallel version of <a class="reference external" href="https://www.hdfgroup.org/downloads/hdf5/">HDF5</a>. Download the source
+package, compile and install the parallel version to your path.
+Your system may already have HDF5 installed. Software such as GMT relies on the HDF5 package, so use <strong>h5cc-showconfig</strong>
+to see more information about installation, note that h5cc is usually not shown in parallel. We do not want to uninstall
+the existing version of HDF5 on our system. This does not conflict with our subsequent installation of the parallel
+version of HDF5, as long as we specify the installation path of the parallel version.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ chmod <span class="m">777</span> ./configure  <span class="c1"># enable read/write access</span>
+$ ./configure --enable-parallel --enable-shared --prefix<span class="o">=</span>/your/path/of/hdf5_dir/
+$ make
+$ make check
+$ make install
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>After the installation, the executable program will be generated in <strong>./bin</strong> path of your <strong>hdf5_dir</strong> directory.
+<strong>h5pcc</strong> will be generated due to the parallel installation, similar to the <strong>h5cc</strong> will be generated by the non-parallel
+installation. Check the installation version information:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ h5pcc -showconfig
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-the-h5py-parallel-version">
+<h3><a class="toc-backref" href="#id7">3. Install the h5py parallel version</a><a class="headerlink" href="#install-the-h5py-parallel-version" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Before installing <code class="docutils literal notranslate"><span class="pre">h5py</span></code>, you need to uninstall both <code class="docutils literal notranslate"><span class="pre">hdf5</span></code> and <code class="docutils literal notranslate"><span class="pre">h5py</span></code> in your environment, and then download
+h5py &lt;<a class="reference external" href="https://github.com/h5py/h5py">https://github.com/h5py/h5py</a>&gt; and compile the source code. You need to specify the path of <strong>HDF5</strong> and <strong>CC</strong>.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">export</span> <span class="nv">CC</span><span class="o">=</span>/path/to/mpicc   <span class="c1"># do not use conda&#39;s mpicc</span>
+$ <span class="nb">echo</span> %CC
+$ <span class="nb">export</span> <span class="nv">HDF5_MPI</span><span class="o">=</span><span class="s2">&quot;ON&quot;</span>
+$ <span class="nb">export</span> <span class="nv">HDF5_DIR</span><span class="o">=</span><span class="s2">&quot;/your/path/of/hdf5_dir/&quot;</span>
+$ pip install .
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Check the installation version information (download the <strong>demo2.py</strong> on h5py):</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">from</span> <span class="nn">mpi4py</span> <span class="kn">import</span> <span class="n">MPI</span>
+<span class="kn">import</span> <span class="nn">h5py</span>
+
+<span class="n">rank</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">COMM_WORLD</span><span class="o">.</span><span class="n">rank</span>  <span class="c1"># The process ID (integer 0-3 for 4-process run)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="s1">&#39;parallel_test.hdf5&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;mpio&#39;</span><span class="p">,</span> <span class="n">comm</span><span class="o">=</span><span class="n">MPI</span><span class="o">.</span><span class="n">COMM_WORLD</span><span class="p">)</span>
+
+<span class="n">dset</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
+<span class="n">dset</span><span class="p">[</span><span class="n">rank</span><span class="p">]</span> <span class="o">=</span> <span class="n">rank</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Run the program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mpiexec -n 4 python demo2.py
+</pre></div>
+</div>
+<p>Looking at the file with <code class="docutils literal notranslate"><span class="pre">h5dump</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ h5dump parallel_test.hdf5
+HDF5 &quot;parallel_test.hdf5&quot; {
+GROUP &quot;/&quot; {
+   DATASET &quot;test&quot; {
+      DATATYPE  H5T_STD_I32LE
+      DATASPACE  SIMPLE { ( 4 ) / ( 4 ) }
+      DATA {
+      (0): 0, 1, 2, 3
+      }
+   }
+}
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-pyasdf-parallel-version">
+<h3><a class="toc-backref" href="#id8">1. Install pyasdf parallel version</a><a class="headerlink" href="#install-pyasdf-parallel-version" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>After the above steps are completed sucessful, you can directly use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install <code class="docutils literal notranslate"><span class="pre">pyasdf</span></code></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install pyasdf
+$ python -c <span class="s2">&quot;import pyasdf; pyasdf.print_sys_info()&quot;</span>   <span class="c1"># (check for a parallel version)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-mcmtpy-parallel-version">
+<h3><a class="toc-backref" href="#id9">5. Install MCMTpy parallel version</a><a class="headerlink" href="#install-mcmtpy-parallel-version" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Finally, you can install the parallel version of MCMTpy.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install MCMTpy        <span class="c1"># or python setup.py install</span>
+$ pip uninstall MCMTpy      <span class="c1"># uninstall</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="reference-installation-blog">
+<h2><a class="toc-backref" href="#id10">Reference Installation Blog</a><a class="headerlink" href="#reference-installation-blog" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drtiresome.com/2016/08/23/build-and-install-mpi-parallel-hdf5-and-h5py-from-source-on-linux/">https://drtiresome.com/2016/08/23/build-and-install-mpi-parallel-hdf5-and-h5py-from-source-on-linux/</a></p></li>
+<li><p><a class="reference external" href="https://gist.github.com/kentwait/280aa20e9d8f2c8737b2bec4a49b7c92">https://gist.github.com/kentwait/280aa20e9d8f2c8737b2bec4a49b7c92</a></p></li>
+<li><p><a class="reference external" href="https://github.com/h5py/h5py/issues/759">https://github.com/h5py/h5py/issues/759</a></p></li>
+<li><p><a class="reference external" href="https://seismicdata.github.io/pyasdf/installation.html">https://seismicdata.github.io/pyasdf/installation.html</a></p></li>
+<li><p><a class="reference external" href="https://noise-python.readthedocs.io/en/latest/installation.html">https://noise-python.readthedocs.io/en/latest/installation.html</a></p></li>
+<li><p><a class="reference external" href="https://docs.h5py.org/en/stable/mpi.html">https://docs.h5py.org/en/stable/mpi.html</a></p></li>
+<li><p><a class="reference external" href="https://docs.h5py.org/en/stable/build.html">https://docs.h5py.org/en/stable/build.html</a></p></li>
+<li><p><a class="reference external" href="https://github.com/conda-forge/hdf5-feedstock/issues/118">https://github.com/conda-forge/hdf5-feedstock/issues/118</a></p></li>
+<li><p><a class="reference external" href="https://distarray.readthedocs.io/en/latest/hdf5-notes.html">https://distarray.readthedocs.io/en/latest/hdf5-notes.html</a></p></li>
+<li><p><a class="reference external" href="https://forum.hdfgroup.org/t/installing-hdf5-ready-version-of-open-mpi/4998">https://forum.hdfgroup.org/t/installing-hdf5-ready-version-of-open-mpi/4998</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to MCMTpy-test’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Fu Yin.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

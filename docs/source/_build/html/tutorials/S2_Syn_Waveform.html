@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Synthesize the Test Data &mdash; MCMTpy-test 0.1.0a1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Prepare Data for MCMTpy" href="S3_Process_Data.html" />
+    <link rel="prev" title="Calculate Green Function Database" href="S1_Build_GFs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MCMTpy-test
+          
+
+          
+            
+            <img src="../_static/logo-small-cut.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0a1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installing:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorial_detailed.html">Tutorial_Detailed</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="S1_Build_GFs.html">Calculate Green Function Database</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Synthesize the Test Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#path">Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#source">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#station">Station</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#source-time-function">Source Time Function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filter">Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-noise">Add Noise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output">Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="S3_Process_Data.html">Prepare Data for MCMTpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S4_Inv_DC.html">Inversion of  Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S5_Plot_Result.html">Result Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S6_Conver_FM.html">Conversion of Source Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S7_Plot_Beachball.html">Plot Beachball with Station Projected</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S8_Decompose_MT.html">Moment Tensor Decompose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S9_Plot_Hudson.html">Huston Plot</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">References:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MCMTpy-test</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorial_detailed.html">Tutorial_Detailed</a> &raquo;</li>
+        
+      <li>Synthesize the Test Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tutorials/S2_Syn_Waveform.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="synthesize-the-test-data">
+<h1>Synthesize the Test Data<a class="headerlink" href="#synthesize-the-test-data" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#path" id="id1">Path</a></p></li>
+<li><p><a class="reference internal" href="#source" id="id2">Source</a></p></li>
+<li><p><a class="reference internal" href="#station" id="id3">Station</a></p></li>
+<li><p><a class="reference internal" href="#source-time-function" id="id4">Source Time Function</a></p></li>
+<li><p><a class="reference internal" href="#filter" id="id5">Filter</a></p></li>
+<li><p><a class="reference internal" href="#add-noise" id="id6">Add Noise</a></p></li>
+<li><p><a class="reference internal" href="#output" id="id7">Output</a></p></li>
+<li><p><a class="reference internal" href="#example" id="id8">Example</a></p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>The synthesized test data can help us check whether the Green’s function database is correctly calculated.</p></li>
+<li><p>We do not recommend using relative paths because of the possibility of errors. <strong>Absolute paths</strong> are preferred.</p></li>
+</ul>
+<div class="section" id="path">
+<h2><a class="toc-backref" href="#id1">Path</a><a class="headerlink" href="#path" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">GFs_json_file</span></code></p>
+<ul class="simple">
+<li><p>The path to the Json-file used to calculate Green Function Database.</p></li>
+</ul>
+</div>
+<div class="section" id="source">
+<h2><a class="toc-backref" href="#id2">Source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">srcType</span></code></p>
+<ul class="simple">
+<li><p>The type of <em>Source</em>, mt(moment tensor) dc(double-couple) sf(single-couple) ep(explosion).</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">point</span></code></p>
+<ul class="simple">
+<li><p>The latitude longitude and depth of the source.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">source_mechanism</span></code></p>
+<ul class="simple">
+<li><p>Focal mechanism.</p></li>
+<li><p>When <code class="docutils literal notranslate"><span class="pre">srcType</span></code> = <strong>dc</strong>: <code class="docutils literal notranslate"><span class="pre">source_mechanism</span></code> = [Mw, Strike, Dip, Rake]</p></li>
+<li><p>When <code class="docutils literal notranslate"><span class="pre">srcType</span></code> = <strong>mt</strong>: <code class="docutils literal notranslate"><span class="pre">source_mechanism</span></code> = [Mw, Mxx, Mxy, Mxz, Myy, Myz, Mzz]</p></li>
+</ul>
+</div>
+<div class="section" id="station">
+<h2><a class="toc-backref" href="#id3">Station</a><a class="headerlink" href="#station" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">NET_STA</span></code></p>
+<ul class="simple">
+<li><p>The information contained in the two-dimensional list: [network_name] [station_name]  [station_lat]   [source_lon]    [station_depth]</p></li>
+</ul>
+</div>
+<div class="section" id="source-time-function">
+<h2><a class="toc-backref" href="#id4">Source Time Function</a><a class="headerlink" href="#source-time-function" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Trapezoid_stf_mode</span></code></p>
+<ul>
+<li><p>Whether to use pyfk provided trapezoid shaped source time function. Set to be <strong>.true.</strong> you need to set the following parameters correctly:</p>
+<p><code class="docutils literal notranslate"><span class="pre">dura</span></code>
+<code class="docutils literal notranslate"><span class="pre">rise</span></code>
+<code class="docutils literal notranslate"><span class="pre">delta</span></code></p>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">dura</span></code></p>
+<ul class="simple">
+<li><p>Duration time (s).</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">rise</span></code></p>
+<ul class="simple">
+<li><p>Rise time (s).</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">delta</span></code></p>
+<ul class="simple">
+<li><p>The time interval (s).</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Stf_file</span></code></p>
+<ul class="simple">
+<li><p>Stf_file should be an <strong>SAC</strong> file as the source time function when set <code class="docutils literal notranslate"><span class="pre">Trapezoid_stf_mode</span></code> to be <strong>.false.</strong>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To read the data from the <code class="docutils literal notranslate"><span class="pre">Stf_file</span></code> file, keep the sampling rate of SAC data consistent with the data and GFs.</p>
+</div>
+</div>
+<div class="section" id="filter">
+<h2><a class="toc-backref" href="#id5">Filter</a><a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">filter_mode</span></code></p>
+<ul class="simple">
+<li><p>Whether to filter.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">freqmin</span></code></p>
+<ul class="simple">
+<li><p>The minimum frequency of filtering.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">freqmax</span></code></p>
+<ul class="simple">
+<li><p>The maximum frequency of filtering.</p></li>
+</ul>
+</div>
+<div class="section" id="add-noise">
+<h2><a class="toc-backref" href="#id6">Add Noise</a><a class="headerlink" href="#add-noise" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Add_noise</span></code></p>
+<ul class="simple">
+<li><p>Whether add noise to syn.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">noise_level_waveform</span></code></p>
+<ul class="simple">
+<li><p>Noise level added to the waveform.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">noise_level_arrive_time</span></code></p>
+<ul class="simple">
+<li><p>Noise level added to the phase time as <strong>tp</strong> and <strong>ts</strong>.</p></li>
+</ul>
+</div>
+<div class="section" id="output">
+<h2><a class="toc-backref" href="#id7">Output</a><a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Output_mode</span></code></p>
+<ul class="simple">
+<li><p>Output data or not.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Output_path</span></code></p>
+<ul class="simple">
+<li><p>Path of output data</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">source_name</span></code></p>
+<ul class="simple">
+<li><p>Event name of output data, you can set it any way you want. Only lowercase letters are supported.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">ASDF_filename</span></code></p>
+<ul class="simple">
+<li><p>The name of the output ASDF file</p></li>
+</ul>
+</div>
+<div class="section" id="example">
+<h2><a class="toc-backref" href="#id8">Example</a><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The <strong>example_path</strong> need to de changed to your path, and run this notebook to set <strong>syn.json</strong> file.</p></li>
+</ul>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">json5</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+
+<span class="c1"># The root directory of the project</span>
+<span class="n">example_path</span> <span class="o">=</span> <span class="s1">&#39;/Users/yf/3.Project/8.MCMTpy/MCMTpy-master/data/example_yunnan&#39;</span>
+
+<span class="c1">#------------------------------------------------------------#</span>
+<span class="c1"># we expect no parameters need to be changed below</span>
+<span class="c1">#------------------------------------------------------------#</span>
+<span class="c1"># change path to Green_Funcs</span>
+<span class="n">notebook_path</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">notebook_path</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;../syn&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">())</span>
+
+<span class="c1"># show build_GFs.json </span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;syn.json&#39;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">:</span>
+    <span class="n">syn_json</span><span class="o">=</span><span class="n">json5</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span>
+
+<span class="c1"># change parameters with absolute path</span>
+<span class="n">syn_json</span><span class="p">[</span><span class="s2">&quot;GFs_json_file&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">example_path</span><span class="p">,</span><span class="s2">&quot;Green_Funcs/build_GFs_new.json&quot;</span><span class="p">)</span>
+<span class="n">syn_json</span><span class="p">[</span><span class="s2">&quot;Stf_file&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">example_path</span><span class="p">,</span><span class="s2">&quot;syn/Stf_file/Stf_file.sac&quot;</span><span class="p">)</span>
+<span class="n">syn_json</span><span class="p">[</span><span class="s2">&quot;Output_path&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">example_path</span><span class="p">,</span><span class="s2">&quot;syn/Synthetic&quot;</span><span class="p">)</span>       
+<span class="n">syn_json_new</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">example_path</span><span class="p">,</span><span class="s1">&#39;syn/syn_new.json&#39;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">syn_json_new</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f2</span><span class="p">:</span>
+    <span class="n">json5</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">syn_json</span><span class="p">,</span> <span class="n">f2</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">f2</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="s1">&#39;./Synthetic&#39;</span><span class="p">)</span>
+<span class="c1"># !MCMTpy syn pyfk  -c ./syn_new.json  &gt; syn.log</span>
+</pre></div>
+</td></tr></table></div>
+<ul>
+<li><p>Now you can run MCMTpy in bash:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ MCMTpy  syn pyfk  -c ./syn.json
+</pre></div>
+</div>
+</li>
+<li><p>View syn waveform:</p></li>
+</ul>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pyasdf</span>
+
+
+<span class="c1"># The root directory of the project</span>
+<span class="n">example_path</span> <span class="o">=</span> <span class="s1">&#39;/Users/yf/3.Project/8.MCMTpy/MCMTpy-master/data/example_yunnan&#39;</span>
+
+<span class="c1">#------------------------------------------------------------#</span>
+<span class="c1"># we expect no parameters need to be changed below</span>
+<span class="c1">#------------------------------------------------------------#</span>
+<span class="c1">## change the path</span>
+<span class="n">h5_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">example_path</span><span class="p">,</span><span class="s1">&#39;syn/Synthetic/SYN_test.h5&#39;</span><span class="p">)</span>
+<span class="n">source_name</span> <span class="o">=</span> <span class="s1">&#39;source_syn&#39;</span>
+
+<span class="c1">### read h5 data --&gt; Sta_data (dict)</span>
+<span class="n">ds_raw</span><span class="o">=</span><span class="n">pyasdf</span><span class="o">.</span><span class="n">ASDFDataSet</span><span class="p">(</span><span class="n">h5_path</span><span class="p">,</span><span class="n">mpi</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">Station_list</span> <span class="o">=</span> <span class="n">ds_raw</span><span class="o">.</span><span class="n">waveforms</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
+<span class="n">Station_num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Station_list</span><span class="p">)</span>
+
+<span class="n">Sta_data</span><span class="o">=</span><span class="p">{}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">Station_num</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">info</span><span class="o">=</span><span class="p">{}</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="n">ds_raw</span><span class="o">.</span><span class="n">waveforms</span><span class="p">[</span><span class="n">Station_list</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">.</span><span class="n">get_waveform_tags</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">source_name</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span>
+        <span class="n">raw_sac</span> <span class="o">=</span> <span class="n">ds_raw</span><span class="o">.</span><span class="n">waveforms</span><span class="p">[</span><span class="n">Station_list</span><span class="p">[</span><span class="n">i</span><span class="p">]][</span><span class="n">source_name</span><span class="p">]</span>
+        <span class="n">tp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span> <span class="n">ds_raw</span><span class="o">.</span><span class="n">waveforms</span><span class="p">[</span><span class="n">Station_list</span><span class="p">[</span><span class="n">i</span><span class="p">]][</span><span class="n">source_name</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">asdf</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span>
+        <span class="n">ts</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span> <span class="n">ds_raw</span><span class="o">.</span><span class="n">waveforms</span><span class="p">[</span><span class="n">Station_list</span><span class="p">[</span><span class="n">i</span><span class="p">]][</span><span class="n">source_name</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">asdf</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="p">)</span>
+        <span class="n">info</span><span class="o">.</span><span class="n">update</span><span class="p">({</span> <span class="s2">&quot;tp&quot;</span><span class="p">:</span> <span class="n">tp</span><span class="p">})</span>  
+        <span class="n">info</span><span class="o">.</span><span class="n">update</span><span class="p">({</span> <span class="s2">&quot;ts&quot;</span><span class="p">:</span> <span class="n">ts</span><span class="p">})</span>
+        <span class="n">info</span><span class="o">.</span><span class="n">update</span><span class="p">({</span> <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">raw_sac</span><span class="p">})</span>
+        <span class="n">Sta_data</span><span class="o">.</span><span class="n">update</span><span class="p">({</span> <span class="n">Station_list</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span> <span class="n">info</span><span class="p">})</span>
+
+<span class="c1"># plot data</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">Sta_data</span><span class="p">[</span><span class="s1">&#39;YN.YUM&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">Sta_data</span><span class="p">[</span><span class="s1">&#39;YN.YUM&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">stats</span>
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please follow the above parameter instructions and set all parameters correctly before running the program.
+Otherwise, it is easy to report an error!</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="S3_Process_Data.html" class="btn btn-neutral float-right" title="Prepare Data for MCMTpy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="S1_Build_GFs.html" class="btn btn-neutral float-left" title="Calculate Green Function Database" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Fu Yin.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

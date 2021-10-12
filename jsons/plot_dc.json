@@ -1,0 +1,108 @@
+{
+
+    // 1. Path
+    "plot_output_path": "./figure_dc",                                        // Plot result output file path.
+    "Inv_json_file": "./sample_dc.json",                                        // The path to the Json-file used in inversion.
+    "fig_format": "pdf",                                                        // Output figure format.
+
+
+    // 2. Hist
+    "plot_hist":true,                                                          // Whether to plot hist-figure.
+    
+    "N_start": 0,                                                               // The sequence number of all-FM Markov chain to plot in hist-figure.
+    "N_start_accept": 0,                                                      // The sequence number of all-accept-FM Markov chain to plot in hist-figure.
+    "num_bins":  50,                                                            // Number of grids to draw in hist-figure
+    "num_std":5,                                                                // Range of axes in each subgraph (mean +- several times standard deviation). num_std means n times standard deviation.
+
+    "labels_name":['Mw','Strike/°','Dip/°','Rake/°','Latitude/°','Longtitude/°','Depth/km','T0/s'],   // Labels dc: ['Mw', 'strike/°', 'dip/°', 'rake/°', 'lat/°', 'lon/°', 'depth/km', 't0/s']  || mt: ['Mw', 'Mxx', 'Mxy', 'Mxz', 'Myy', 'Myz', 'Mzz', 'lat/°', 'lon/°', 'depth/km', 't0/s']     
+
+
+
+    // 3. Misfit
+    "plot_misfit": true,                                                       // Whether to plot misfit-figure.
+
+    "MPI_n_mis": 0,                                                              // Which MPI’s misfit do you want to draw in figure.
+    "Chains_n_mis": 0,                                                           // Which Chains’s misfit do you want to draw in figure.
+
+
+
+    // 4. accept_ratio
+    "plot_accept_ratio": true,                                                       // Whether to plot accept_ratio-figure.
+
+    "MPI_n_acc": 0,                                                              // Which MPI’s misfit do you want to draw in figure.
+    "Chains_n_acc": 0,                                                           // Which Chains’s misfit do you want to draw in figure.
+
+
+
+    // 5. Waveform
+    "plot_waveform": false,                                                      // Whether to plot waveform-figure.
+
+    "Geometrical_spreading_mode": false,
+    "Amplitude_normalization_mode": true,
+
+    "NET_STA": [
+['YN', 'EYA', 26.108801, 99.947502, 0],
+['YN', 'YUL', 25.885401, 99.371696, 0],
+['XG', 'CFT', 25.8486, 100.5173, 0],
+['YN', 'BAS', 25.118, 99.146599, 0],
+['YN', 'HEQ', 26.549, 100.1515, 0],
+['YN', 'LUS', 25.831699, 98.851799, 0],
+['YN', 'LIJ', 26.895599, 100.2322, 0],
+['YN', 'YOS', 26.694099, 100.7683, 0],
+['YN', 'DAY', 25.726801, 101.3164, 0],
+['YN', 'TNC', 25.0289, 98.519798, 0],
+
+['YN', 'HUP', 26.587099, 101.1993, 0],
+['YN', 'CUX', 25.029301, 101.5356, 0],
+['YN', 'MAS', 24.4245, 98.592499, 0],
+['YN', 'YOD', 24.0357, 99.245399, 0],
+['YN', 'YUM', 25.6894, 101.8607, 0],
+['YN', 'LIC', 23.879499, 100.1688, 0],
+['YN', 'ZOD', 27.8232, 99.698402, 0],
+['YN', 'YIM', 24.700199, 102.144, 0],
+['YN', 'WAD', 24.0851, 98.0709, 0],
+['YN', 'JIG', 23.5019, 100.7351, 0],
+
+['YN', 'LUQ', 25.5485, 102.463, 0],
+['YN', 'CAY', 23.1364, 99.258499, 0],
+['YN', 'KMI', 25.1483, 102.7475, 0],
+['YN', 'HLT', 25.1483, 102.7475, 0],
+['YN', 'YUJ', 23.565901, 101.978, 0],
+['YN', 'DOC', 26.092199, 103.1866, 0],
+['YN', 'QIJ', 26.9095, 102.9434, 0],
+['YN', 'TOH', 24.112801, 102.7881, 0],
+['YN', 'LAC', 22.552401, 99.920601, 0],
+['YN', 'JIS', 23.6504, 102.7598, 0],
+
+['YN', 'MEL', 22.3365, 99.579597, 0],
+['YN', 'MAL', 25.427299, 103.5752, 0],
+['YN', 'MIL', 24.4058, 103.3885, 0],
+['YN', 'JIH', 22.0194, 100.7382, 0],
+['YN', 'GEJ', 23.3535, 103.1596, 0],
+['YN', 'ZAT', 27.4517, 103.655, 0],
+['YN', 'XUW', 26.0881, 104.1357, 0],
+['YN', 'LOP', 24.885599, 104.2911, 0],
+['YN', 'JIP', 22.782499, 103.2234, 0],
+['YN', 'YAJ', 28.1117, 104.2315, 0],
+
+['YN', 'WES', 23.372, 104.253, 0],
+['YN', 'MLP', 23.128401, 104.7024, 0],
+['YN', 'FUN', 23.624901, 105.6202, 0],],                                           // Station to plot: [network_name] [station_name] [station_lat] [source_lon] [station_depth]
+
+
+    "FM_best": [6.65, 138,  76,  -170,    25.62,  99.93,  5.2,  -0.68 ],     // The best focal mechanism
+
+    "line_n_sta": 3,                                                            // Draw several stations per row in waveform-figure.
+
+    "max_p_ylim": 0.5,                                                          // The maximum amplitude of P wave drawing in waveform-figure.
+    "max_s_ylim": 1.0,
+    "max_surf_ylim": 0.5,
+
+    "plot_comp": [[1,1,0],[0,0,0],[1,1,1]],                                     // Components of P, S and Surf, respectively ZRT to plot.
+
+    "plot_comp_name": [ ['P_z','P_r','P_t'],
+                        ['S_z','S_r','S_t'],
+                        ['Surf_z','Surf_r','Surf_t'] ],                         // Labels’ name, it’s depend on the number parameters that you want to plot with "plot_comp".
+
+
+}

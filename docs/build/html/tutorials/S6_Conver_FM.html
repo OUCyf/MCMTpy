@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Conversion of Source Parameters &mdash; MCMTpy-test 0.1.0a1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plot Beachball with Station Projected" href="S7_Plot_Beachball.html" />
+    <link rel="prev" title="Result Visualization" href="S5_Plot_Result.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MCMTpy-test
+          
+
+          
+            
+            <img src="../_static/logo-small-cut.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0a1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installing:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorial_detailed.html">Tutorial_Detailed</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="S1_Build_GFs.html">Calculate Green Function Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S2_Syn_Waveform.html">Synthesize the Test Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S3_Process_Data.html">Prepare Data for MCMTpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S4_Inv_DC.html">Inversion of  Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S5_Plot_Result.html">Result Visualization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Conversion of Source Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-installation">The installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#str-dip-rake-to-mt">str_dip_rake to mt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-conversion-between-str-dip-rake-and-a-n-vector">The conversion between str_dip_rake and A/N vector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-conversion-between-a-n-vector-and-p-t-n-vector">The conversion between A/N vector and P/T/N vector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mt-to-p-t-n-vector">mt to P/T/N vector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#p-t-n-vector-to-p-t-n-vector-s-stirke-and-dip">P/T/N vector to P/T/N vector’s stirke and dip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#describe-fault-plane-with-two-str-dip-rake">Describe_fault_plane with two str_dip_rake</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="S7_Plot_Beachball.html">Plot Beachball with Station Projected</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S8_Decompose_MT.html">Moment Tensor Decompose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="S9_Plot_Hudson.html">Huston Plot</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">References:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MCMTpy-test</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorial_detailed.html">Tutorial_Detailed</a> &raquo;</li>
+        
+      <li>Conversion of Source Parameters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tutorials/S6_Conver_FM.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="conversion-of-source-parameters">
+<h1>Conversion of Source Parameters<a class="headerlink" href="#conversion-of-source-parameters" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>The MCMTpy provides a series of scripts for source parameter calculation and conversion. The MomentTensor script refers
+to some theories and codes of <a class="reference external" href="https://github.com/obspy/obspy">Obspy</a> <a class="reference external" href="https://github.com/geophysics/MoPaD">MoPaD</a> and
+Introduction to Seismology (Yongge Wan), mainly including:</p></li>
+</ul>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#the-installation" id="id1">The installation</a></p></li>
+<li><p><a class="reference internal" href="#str-dip-rake-to-mt" id="id2">str_dip_rake to mt</a></p></li>
+<li><p><a class="reference internal" href="#the-conversion-between-str-dip-rake-and-a-n-vector" id="id3">The conversion between str_dip_rake and A/N vector</a></p></li>
+<li><p><a class="reference internal" href="#the-conversion-between-a-n-vector-and-p-t-n-vector" id="id4">The conversion between A/N vector and P/T/N vector</a></p></li>
+<li><p><a class="reference internal" href="#mt-to-p-t-n-vector" id="id5">mt to P/T/N vector</a></p></li>
+<li><p><a class="reference internal" href="#p-t-n-vector-to-p-t-n-vector-s-stirke-and-dip" id="id6">P/T/N vector to P/T/N vector’s stirke and dip</a></p></li>
+<li><p><a class="reference internal" href="#describe-fault-plane-with-two-str-dip-rake" id="id7">Describe_fault_plane with two str_dip_rake</a></p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>We do not recommend using relative paths because of the possibility of errors. Absolute paths are preferred.</p></li>
+</ul>
+<div class="section" id="the-installation">
+<h2><a class="toc-backref" href="#id1">The installation</a><a class="headerlink" href="#the-installation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>jupyter notebook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import MomentTensor</span>
+<span class="kn">from</span> <span class="nn">MCMTpy</span> <span class="kn">import</span> <span class="n">MomentTensor</span> <span class="k">as</span> <span class="n">MTpy</span>
+
+<span class="c1"># get __doc__</span>
+<span class="n">MTpy</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="str-dip-rake-to-mt">
+<h2><a class="toc-backref" href="#id2">str_dip_rake to mt</a><a class="headerlink" href="#str-dip-rake-to-mt" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>jupyter notebook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># function: str_dip_rake2MT</span>
+<span class="n">MTpy</span><span class="o">.</span><span class="n">str_dip_rake2MT</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># input</span>
+<span class="n">strike</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">dip</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">rake</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">MTpy</span><span class="o">.</span><span class="n">str_dip_rake2MT</span><span class="p">(</span><span class="n">strike</span><span class="p">,</span><span class="n">dip</span><span class="p">,</span><span class="n">rake</span><span class="p">)</span>
+<span class="n">A</span><span class="o">.</span><span class="n">mt</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="the-conversion-between-str-dip-rake-and-a-n-vector">
+<h2><a class="toc-backref" href="#id3">The conversion between str_dip_rake and A/N vector</a><a class="headerlink" href="#the-conversion-between-str-dip-rake-and-a-n-vector" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>jupyter notebook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#-----------------------------------------------#</span>
+<span class="c1"># function: str_dip_rake2AN</span>
+<span class="n">MTpy</span><span class="o">.</span><span class="n">str_dip_rake2AN</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># str_dip_rake to A/N vector</span>
+<span class="c1"># input</span>
+<span class="n">strike</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">dip</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">rake</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">A</span><span class="p">,</span><span class="n">N</span> <span class="o">=</span> <span class="n">MTpy</span><span class="o">.</span><span class="n">str_dip_rake2AN</span><span class="p">(</span><span class="n">strike</span><span class="p">,</span><span class="n">dip</span><span class="p">,</span><span class="n">rake</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A = &#39;</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;N = &#39;</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------------------------#</span>
+<span class="c1"># function AN2str_dip_rake</span>
+<span class="n">MTpy</span><span class="o">.</span><span class="n">AN2str_dip_rake</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># A/N vector to str_dip_rake</span>
+<span class="c1"># input</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.37330426</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.53992106</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.75440651</span><span class="p">])</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.58682409</span><span class="p">,</span>  <span class="mf">0.49240388</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.64278761</span><span class="p">])</span>
+
+<span class="n">DD</span> <span class="o">=</span> <span class="n">MTpy</span><span class="o">.</span><span class="n">AN2str_dip_rake</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;strike = &#39;</span><span class="p">,</span> <span class="n">DD</span><span class="o">.</span><span class="n">strike</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dip = &#39;</span><span class="p">,</span> <span class="n">DD</span><span class="o">.</span><span class="n">dip</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rake = &#39;</span><span class="p">,</span> <span class="n">DD</span><span class="o">.</span><span class="n">rake</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="the-conversion-between-a-n-vector-and-p-t-n-vector">
+<h2><a class="toc-backref" href="#id4">The conversion between A/N vector and P/T/N vector</a><a class="headerlink" href="#the-conversion-between-a-n-vector-and-p-t-n-vector" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>jupyter notebook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#-----------------------------------------------#</span>
+<span class="c1"># function AN2TPN</span>
+<span class="n">MTpy</span><span class="o">.</span><span class="n">AN2TPN</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Calculate the T-axis, P-axis and N-axis according to the slip vector (A) and fault plane direction vector (N)</span>
+<span class="c1"># input</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.37330426</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.53992106</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.75440651</span><span class="p">])</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.58682409</span><span class="p">,</span>  <span class="mf">0.49240388</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.64278761</span><span class="p">])</span>
+
+<span class="n">T</span><span class="p">,</span><span class="n">P</span><span class="p">,</span><span class="n">Null</span> <span class="o">=</span> <span class="n">MTpy</span><span class="o">.</span><span class="n">AN2TPN</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;T = &#39;</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;P = &#39;</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Null = &#39;</span><span class="p">,</span> <span class="n">Null</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------------------------#</span>
+<span class="c1"># function TP2AN</span>
+<span class="n">MTpy</span><span class="o">.</span><span class="n">TP2AN</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Calculate the slip vector (A) and fault plane direction vector (N) according to the T-axis and P-axis</span>
+<span class="c1"># input</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.15098132</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.03359972</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.98796544</span><span class="p">])</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.67891327</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.72996397</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.07892648</span><span class="p">])</span>
+
+<span class="n">A</span><span class="p">,</span><span class="n">N</span> <span class="o">=</span> <span class="n">MTpy</span><span class="o">.</span><span class="n">TP2AN</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">P</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A = &#39;</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;N = &#39;</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="mt-to-p-t-n-vector">
+<h2><a class="toc-backref" href="#id5">mt to P/T/N vector</a><a class="headerlink" href="#mt-to-p-t-n-vector" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>jupyter notebook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># function MT2TPN</span>
+<span class="n">MTpy</span><span class="o">.</span><span class="n">MT2TPN</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># input</span>
+<span class="n">strike</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">dip</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">rake</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">MTpy</span><span class="o">.</span><span class="n">str_dip_rake2MT</span><span class="p">(</span><span class="n">strike</span><span class="p">,</span><span class="n">dip</span><span class="p">,</span><span class="n">rake</span><span class="p">)</span>
+<span class="n">T</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Null</span> <span class="o">=</span> <span class="n">MTpy</span><span class="o">.</span><span class="n">MT2TPN</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;T = &#39;</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;P = &#39;</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Null = &#39;</span><span class="p">,</span> <span class="n">Null</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="p-t-n-vector-to-p-t-n-vector-s-stirke-and-dip">
+<h2><a class="toc-backref" href="#id6">P/T/N vector to P/T/N vector’s stirke and dip</a><a class="headerlink" href="#p-t-n-vector-to-p-t-n-vector-s-stirke-and-dip" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>jupyter notebook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># function vector2str_dip</span>
+<span class="n">MTpy</span><span class="o">.</span><span class="n">vector2str_dip</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># input</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.37330426</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.53992106</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.75440651</span><span class="p">])</span>
+
+<span class="n">CC</span> <span class="o">=</span> <span class="n">MTpy</span><span class="o">.</span><span class="n">vector2str_dip</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A.strike = &#39;</span><span class="p">,</span> <span class="n">CC</span><span class="o">.</span><span class="n">strike</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A.dip = &#39;</span><span class="p">,</span> <span class="n">CC</span><span class="o">.</span><span class="n">dip</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="describe-fault-plane-with-two-str-dip-rake">
+<h2><a class="toc-backref" href="#id7">Describe_fault_plane with two str_dip_rake</a><a class="headerlink" href="#describe-fault-plane-with-two-str-dip-rake" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>jupyter notebook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># function describe_fault_plane</span>
+<span class="n">MTpy</span><span class="o">.</span><span class="n">describe_fault_plane</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># input</span>
+<span class="n">strike</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">dip</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">rake</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">MTpy</span><span class="o">.</span><span class="n">str_dip_rake2MT</span><span class="p">(</span><span class="n">strike</span><span class="p">,</span><span class="n">dip</span><span class="p">,</span><span class="n">rake</span><span class="p">)</span>
+<span class="n">CC</span> <span class="o">=</span> <span class="n">MTpy</span><span class="o">.</span><span class="n">describe_fault_plane</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">mt</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;FM_1 = &#39;</span><span class="p">,</span> <span class="n">CC</span><span class="p">[</span><span class="mi">0</span><span class="p">,:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;FM_2 = &#39;</span><span class="p">,</span> <span class="n">CC</span><span class="p">[</span><span class="mi">1</span><span class="p">,:])</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="S7_Plot_Beachball.html" class="btn btn-neutral float-right" title="Plot Beachball with Station Projected" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="S5_Plot_Result.html" class="btn btn-neutral float-left" title="Result Visualization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Fu Yin.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

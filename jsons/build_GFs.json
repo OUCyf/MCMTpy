@@ -1,0 +1,60 @@
+{
+    // 1.Station and Source
+    "Database_mode": true,                                                     //true or false
+
+    //-------------- true --------------
+        "Source_depth_min": 1.0,
+        "Source_depth_max": 30.0,
+        "Source_depth_spacing": 0.5,
+        "Station_distance_radius_min": 0.0,
+        "Station_distance_radius_max": 800.0,
+        "Station_distance_spacing": 0.5,
+        "Source_name": 'source',                                                // only lowercase letters are supported
+        "Network_name": 'NET_1',
+        "Station_name": 'STA',
+        "Station_depth_reference": 0,                                           // depth of all virtual stations (km)
+
+    //-------------- false --------------
+        "Source_Station_info": "./Source_Station_info.txt",
+
+
+
+    // 2.MPI
+    "MPI_n":30,
+
+
+
+    // 3.Path
+    "DATADIR": "./GFs",
+    "DATADIR_splits": "./GFs/GFs_splits",
+
+
+
+    // 4.SourceModel
+    "source_mechanism": null,                                                   // Default value, do not change
+    "srcType":"dc",                                                             // the type of Green’s function, dc(double-couple) sf(single-couple) ep(explosion). Note: no 'mt'
+
+
+    // 5.SeisModel
+    "Velocity_model": "./v_model_yunnan.txt",
+    "flattening":false,
+
+
+
+    // 6.Config
+    "npt":2048,
+    "dt":0.2,
+    "degrees": false,                                                            // Use degrees instead of km, defaults to .true.. Only when Database_mode = .true., it can be changed to .false.
+    "taper":0.3,                                                                // Default value, do not change
+    "filter":[0, 0],                                                            // Default value, do not change
+    "dk":0.3,                                                                   // Default value, do not change
+    "smth":1.0,                                                                 // Default value, do not change
+    "pmin":0.0,                                                                 // Default value, do not change
+    "pmax":1.0,                                                                 // Default value, do not change
+    "kmax":15.0,                                                                // Default value, do not change
+    "rdep":0.0,                                                                 // Default value, do not change
+    "updn":"all",                                                               // Default value, do not change
+    "samples_before_first_arrival":100                                          // The number of points before the first arrival, defaults to 50.
+    
+}
+ 

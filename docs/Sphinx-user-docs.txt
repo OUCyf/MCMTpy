@@ -1,0 +1,37 @@
+
+1. 安装 Sphinx
+	下载 Anaconda 会自带 Sphinx.
+	此外还需下载主题风格: pip install sphinx_rtd_theme
+
+2. 创建工程
+	创建一个新的文件夹，在该目录终端中输入: sphinx-quickstart
+	根据提示完成工程的初始化.
+	可以看到有4个文件：
+
+		build 目录 运行make命令后，生成的文件都在这个目录里面
+		source 目录 放置文档的源文件
+		make.bat 批处理命令
+		makefile
+3. 生成 HTML
+	终端中输入: make html 
+	该命令就可以生成html形式的文档了
+
+4. 推荐一种sphinx+reStructuredText的编辑方式
+	使用 VScode 安装插件 reStructuredText 编写，可实时查看 HTML 渲染结果
+	参考博客: https://zhuanlan.zhihu.com/p/97214287
+
+
+
+参考博客: 
+	1) https://www.jianshu.com/p/78e9e1b8553a
+	2) https://docgenerate.readthedocs.io/en/latest/sphinx/index.html#
+
+
+
+
+5. rst转pdf 目前流行两种方式，推荐使用 rst->latex->pdf 的方式，不推荐使用 rst2pdf 的方式。
+	目前这两种方式都已经安装
+
+参考博客：
+	1）https://zhuanlan.zhihu.com/p/99576114
+	2）https://segmentfault.com/a/1190000018265706

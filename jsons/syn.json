@@ -1,0 +1,54 @@
+{
+
+    // 1. Path
+    "GFs_json_file": "./build_GFs.json",                       // The path to the Json-file used to calculate Green Function Database.
+
+
+    // 2. Source
+    "srcType": 'dc',                                                            // The type of source, mt(moment tensor) dc(double-couple) sf(single-couple) ep(explosion).
+    "point": [25.682,  99.881,  5],                                             // Lat lon and depth of the source
+    "source_mechanism": [6.4,  141,  68,  -153],                                // dc: [Mw, Strike, Dip, Rake]  ||  mt: [Mw, Mxx, Mxy, Mxz, Myy, Myz, Mzz]
+
+
+    // 3. Station
+    "NET_STA":[ ['YN', 'YUL', 25.885401, 99.371696, 0.0],
+                ['YN', 'LUS', 25.831699, 98.851799, 0.0],
+                ['YN', 'TNC', 25.0289, 98.519798, 0.0],
+                ['YN', 'YOD', 24.0357, 99.245399, 0.0],
+                ['YN', 'JIG', 23.5019, 100.7351, 0.0],
+                ['YN', 'CUX', 25.029301, 101.5356, 0.0],
+                ['YN','YUM', 25.6894, 101.8607, 0.0],
+                ['YN','HUP', 26.587099, 101.1993, 0.0],
+                ['YN', 'LIJ', 26.895599, 100.2322, 0.0],
+                ['YN', 'ZOD', 27.8232, 99.698402, 0.0],],
+                                                                                // [network_name] [station_name] [station_lat] [source_lon] [station_depth]
+
+
+    // 4. Source Time Function
+    "Trapezoid_stf_mode": true,
+    "dura": 4,
+    "rise": 0.5,
+    "delta": 0.2,
+    "Stf_file": "./Stf_file/Stf_file.sac",                                      // Source time function 
+
+
+    // 5. Filter
+    "filter_mode":true,                                                         // Whether do filter
+    "freqmin": 0.005,
+    "freqmax": 2,
+
+
+    // 6. Add Noise
+    "Add_noise": true,
+    "noise_level_waveform": 0.001,                                              // Noise level of waveform
+    "noise_level_arrive_time": 0.1,                                             // Noise level of phase time
+
+
+    // 7. Output
+    "Output_mode": true,
+    "Output_path": "./Synthetic",                                               // Output path
+    "source_name": "source_syn",
+    "ASDF_filename": "SYN_test",
+
+}
+ 

@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Tutorial &mdash; MCMTpy-test 0.1.0a1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial_Detailed" href="tutorial_detailed.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MCMTpy-test
+          
+
+          
+            
+            <img src="_static/logo-small-cut.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0a1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installing:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#about-asdf-format">About ASDF format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#about-pyfk">About pyfk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#short-tutorial">Short tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_detailed.html">Tutorial_Detailed</a></li>
+</ul>
+<p class="caption"><span class="caption-text">References:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MCMTpy-test</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Tutorial</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/tutorial.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, we will show some of the key steps in <strong>MCMTpy</strong> for <strong>Focal Mechanism Inversion</strong>,
+including <strong>DC</strong> (double couple) and <strong>MT</strong> (moment tensor) inversion (not in now).</p>
+<div class="section" id="about-asdf-format">
+<h2>About ASDF format<a class="headerlink" href="#about-asdf-format" title="Permalink to this headline">¶</a></h2>
+<p>The users who are interested in the details of <strong>ASDF format</strong> are referred to the following publication.
+And the pyasdf Github repository <a class="reference external" href="https://github.com/SeismicData/pyasdf">https://github.com/SeismicData/pyasdf</a>.</p>
+<ul class="simple">
+<li><p>Krischer, L., Smith, J., Lei, W., Lefebvre, M., Ruan, Y., de Andrade, E.S., Podhorszki, N., Bozdağ, E.
+and Tromp, J., 2016. An adaptable seismic data format. Geophysical Supplements to the Monthly Notices
+of the Royal Astronomical Society, 207(2), 1003-1011.</p></li>
+</ul>
+<p>You can also find some useful examples about <code class="docutils literal notranslate"><span class="pre">pyasdf</span></code> in <a class="reference external" href="https://noise-python.readthedocs.io/en/latest/examples.html">NoisePy.</a></p>
+</div>
+<div class="section" id="about-pyfk">
+<h2>About pyfk<a class="headerlink" href="#about-pyfk" title="Permalink to this headline">¶</a></h2>
+<p>The users who are interested in the details of <strong>pyfk</strong> are referred to the pyfk Github
+repository <a class="reference external" href="https://github.com/ziyixi/pyfk">https://github.com/ziyixi/pyfk</a>.</p>
+</div>
+<div class="section" id="short-tutorial">
+<h2>Short tutorial<a class="headerlink" href="#short-tutorial" title="Permalink to this headline">¶</a></h2>
+<p>MCMTpy stores all the parameter information in four JSON files: <strong>build_GFs.json</strong>, <strong>syn.json</strong>,
+<strong>sample.json</strong> and <strong>plot.json</strong>, and you can find those json-files in path <em>./MCMTpy-master/jsons/</em>.
+For parameters choosing, please refer to <strong>Detailed tutorial</strong>. The steps to do inversion process are:</p>
+<p><strong>1. Calculate green function database</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ MCMTpy build_GFs pyfk  -c ./build_GFs.json
+$ mpirun -n 4 MCMTpy build_GFs pyfk  -c ./build_GFs.json        # parallel
+</pre></div>
+</div>
+<p><strong>2. Synthesize the test data</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ MCMTpy  syn pyfk  -c ./syn.json
+</pre></div>
+</div>
+<p><strong>3. Inversion of focal mechanism</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ MCMTpy  sample MH  -c ./sample.json
+$ mpirun -n 4  MCMTpy  sample MH  -c ./sample.json        # parallel
+</pre></div>
+</div>
+<p><strong>4. Result visualization</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ MCMTpy plot pyfk -c plot.json
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/station_location.png"><img alt="_images/station_location.png" class="align-center" src="_images/station_location.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/hist.png"><img alt="_images/hist.png" class="align-center" src="_images/hist.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/misfit.png"><img alt="_images/misfit.png" class="align-center" src="_images/misfit.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/alpha.png"><img alt="_images/alpha.png" class="align-center" src="_images/alpha.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/waveform.png"><img alt="_images/waveform.png" class="align-center" src="_images/waveform.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/beachball.png"><img alt="_images/beachball.png" class="align-center" src="_images/beachball.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/Decompose.png"><img alt="_images/Decompose.png" class="align-center" src="_images/Decompose.png" style="width: 100%;" /></a>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tutorial_detailed.html" class="btn btn-neutral float-right" title="Tutorial_Detailed" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Fu Yin.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
