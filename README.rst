@@ -32,7 +32,7 @@ and it has the features as:
 
 Documentation
 -------------
-Detailed `documentation <https://github.com/OUCyf/>`_ can be found here.
+Detailed `documentation <https://yinfu.readthedocs.io/en/latest/>`_ can be found here.
 
 
 
