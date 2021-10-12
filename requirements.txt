@@ -1,4 +1,4 @@
-numpy>=1.14
+numpy
 tqdm>=4.19.4
 matplotlib<=3.1.1
 mpi4py
