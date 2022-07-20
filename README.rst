@@ -5,7 +5,7 @@ MCMTpy
 
 About
 -------------
-🚨 **The package is still undergoing development. We'll update at the end of July. ** 🚨
+🚨 **The package is still undergoing development. We'll update at the end of July.** 🚨
 
 MCMTpy is a Python package designed for seismic source study. It provides functionality for focal mechanism 
 inversion and source parameters analysis.
